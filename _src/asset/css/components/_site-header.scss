@@ -1,0 +1,29 @@
+/*#########################################################
+
+ページヘッダ
+
+#########################################################*/
+.site-header {
+	padding: $mg * 5 0;
+	text-align: center;
+	// ロゴ
+	.sitelogo {
+		display: inline-block;
+		margin-bottom: $mg * 2;
+		font-size: $unit * 4;
+		font-weight: bold;
+		a {
+			display: block;
+		}
+	}
+	/* ========================================================
+	検索フォーム
+	=========================================================*/
+	.search-form {
+		display: flex;
+		.field {
+		}
+		.submit-button {
+		}
+	}
+}

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/*!
+	Theme Name:		SMART-WP-MINIMUM
+	Theme URI:		https://github.com/zionboogie/smart-wp-minimum3.0
+	Description:	最小限必要と思われる構成のテンプレート
+	Author:			rhythmfactory
+	Author URI:		https://rfs.jp/
+	Version:		3.0
+	Requires at least: 5.3
+	Tested up to: 5.6
+	Requires PHP: 5.6
+	License:		GNU General Public License v2 or later
+	License URI:	http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain:  smart-wp-minimum
+	Tags: two-columns, accessibility-ready, threaded-comments
+	*/
+
+/*#########################################################
+WordPress必須クラス
+#########################################################*/
+.wp-caption,
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter,
+.screen-reader-text {
+	/**/
+}
+
+/*#########################################################
+
+読み込み
+
+#########################################################*/
+// リセットCSS（ress.css）
+@import "_src/asset/css/base/ress.scss";
+// 変数・mixin
+@import "_src/asset/css/base/generic.scss";
+// 要素のデフォルト
+@import "_src/asset/css/base/base.scss";
+// よく使うグローバルなElements集
+@import "_src/asset/css/base/global.scss";
+
+/* ========================================================
+よく使うComponents
+=========================================================*/
+// ボタン
+@import "_src/asset/css/components/default-button.scss";
+// リスト
+@import "_src/asset/css/components/default-list.scss";
+// 一覧用タイトル（下ボーダー）
+@import "_src/asset/css/components/default-title.scss";
+
+/* ========================================================
+Components
+=========================================================*/
+// ヘッダ
+@import "_src/asset/css/components/site-header.scss";
+// フッタ
+@import "_src/asset/css/components/site-footer.scss";
+
+// メインコンテンツ、左カラムを含むラッパー
+@import "_src/asset/css/components/main-container.scss";
+
+// 記事の一覧
+@import "_src/asset/css/components/entrylist-container.scss";
+@import "_src/asset/css/components/entry-header.scss";
+@import "_src/asset/css/components/entry-container.scss";
+@import "_src/asset/css/components/entry-footer.scss";
+
+// コメント
+@import "_src/asset/css/components/comment-container.scss";
+@import "_src/asset/css/components/comment-list.scss";
+
+// サイドバー
+@import "_src/asset/css/components/sidebar-container.scss";
+// ウィジェット
+@import "_src/asset/css/components/widget-container.scss";
+
+// カテゴリ
+@import "_src/asset/css/components/category-list.scss";

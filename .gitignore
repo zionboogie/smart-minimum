@@ -1,0 +1,19 @@
+*~
+.DS_Store
+prepros-6.config
+*.swp
+.project
+.vscode
+.editorconfig
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# コーディングファイル
+*.html
+*.css
+
+# Sass関連と.mapファイル
+.sass-cache/
+*.css.map
+*.js.map
