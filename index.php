@@ -5,9 +5,8 @@
 // ヘッダの出力
 get_header();
 ?>
-----
+
 <h2>index.php</h2>
-----
 
 <!-- main -->
 <main class="main-container">
