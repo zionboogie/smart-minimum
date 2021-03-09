@@ -1,6 +1,6 @@
 <?php
 /*
-パーツ：ヘッダ
+パーツ：サイトヘッダ
 */
 ?>
 <!DOCTYPE html>
@@ -15,12 +15,10 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
-----
-
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-	<!-- ページヘッダ -->
+	<!-- サイトヘッダ -->
 	<header class="site-header">
 		<!-- ロゴ -->
 		<?php if ( is_front_page() && is_home() ) : ?>
@@ -34,4 +32,4 @@
 		<?php get_search_form(); ?>
 		<!-- /検索フォーム -->
 	</header>
-	<!-- /ページヘッダ -->
+	<!-- /サイトヘッダ -->

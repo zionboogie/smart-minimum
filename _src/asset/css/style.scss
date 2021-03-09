@@ -37,49 +37,50 @@ WordPress必須クラス
 
 #########################################################*/
 // リセットCSS（ress.css）
-@import "_src/asset/css/base/ress.scss";
+@import "base/ress.scss";
 // 変数・mixin
-@import "_src/asset/css/base/generic.scss";
+@import "base/generic.scss";
 // 要素のデフォルト
-@import "_src/asset/css/base/base.scss";
+@import "base/base.scss";
 // よく使うグローバルなElements集
-@import "_src/asset/css/base/global.scss";
+@import "base/global.scss";
 
 /* ========================================================
 よく使うComponents
 =========================================================*/
 // ボタン
-@import "_src/asset/css/components/default-button.scss";
+@import "components/default-button.scss";
 // リスト
-@import "_src/asset/css/components/default-list.scss";
+@import "components/default-list.scss";
 // 一覧用タイトル（下ボーダー）
-@import "_src/asset/css/components/default-title.scss";
+@import "components/default-title.scss";
 
 /* ========================================================
 Components
 =========================================================*/
 // ヘッダ
-@import "_src/asset/css/components/site-header.scss";
+@import "components/site-header.scss";
+@import "components/search-form.scss";	// 検索フォーム
 // フッタ
-@import "_src/asset/css/components/site-footer.scss";
+@import "components/site-footer.scss";
 
 // メインコンテンツ、左カラムを含むラッパー
-@import "_src/asset/css/components/main-container.scss";
+@import "components/main-container.scss";
 
 // 記事の一覧
-@import "_src/asset/css/components/entrylist-container.scss";
-@import "_src/asset/css/components/entry-header.scss";
-@import "_src/asset/css/components/entry-container.scss";
-@import "_src/asset/css/components/entry-footer.scss";
+@import "components/entrylist-container.scss";
+@import "components/entry-header.scss";
+@import "components/entry-container.scss";
+@import "components/entry-footer.scss";
 
 // コメント
-@import "_src/asset/css/components/comment-container.scss";
-@import "_src/asset/css/components/comment-list.scss";
+@import "components/comment-container.scss";
+@import "components/comment-list.scss";
 
 // サイドバー
-@import "_src/asset/css/components/sidebar-container.scss";
+@import "components/sidebar-container.scss";
 // ウィジェット
-@import "_src/asset/css/components/widget-container.scss";
+@import "components/widget-container.scss";
 
 // カテゴリ
-@import "_src/asset/css/components/category-list.scss";
+@import "components/category-list.scss";

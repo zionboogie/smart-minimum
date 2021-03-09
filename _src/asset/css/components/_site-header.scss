@@ -3,27 +3,24 @@
 ページヘッダ
 
 #########################################################*/
+body{
+	>.site-header {
+		max-width: $w-content;
+		margin: auto;
+	}
+}
 .site-header {
-	padding: $mg * 5 0;
+	padding: calc(5 * #{$mg}) $mg*2;
 	text-align: center;
-	// ロゴ
+		// ロゴ
 	.sitelogo {
 		display: inline-block;
 		margin-bottom: $mg * 2;
-		font-size: $unit * 4;
+		font-size: $unit * 2.5;
 		font-weight: bold;
 		a {
 			display: block;
-		}
-	}
-	/* ========================================================
-	検索フォーム
-	=========================================================*/
-	.search-form {
-		display: flex;
-		.field {
-		}
-		.submit-button {
+			text-decoration: none;
 		}
 	}
 }

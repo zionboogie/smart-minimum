@@ -1,3 +1,190 @@
-.entry-container {
+/*#########################################################
+
+記事内の装飾
+
+#########################################################*/
+.entry-container, .block-editor__typewriter {
 	padding: $mg;
+	iframe {
+		max-width: 100%;
+		@include mq(md) {
+			width: 100%;
+		}
+	}
+	ol,
+	ul {
+		list-style-position: inside;
+		margin: $mgb $mg * 1 $mg * 3 $mg;
+		line-height: 1.8;
+		li {
+			position: relative;
+			margin-bottom: $mg * 2;
+			padding: 0 0 0 $mg*2;
+			margin: 7px 0;
+			&::marker{
+				content: none;
+			}
+			&::before {
+				position: absolute;
+				content: "";
+				display: block;
+				left: 0;
+				top: 0.62em;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $c-accent;
+			}
+		}
+	}
+	ul{
+		list-style-type: none;
+	}
+	ol{
+		li{
+			list-style-type: none;
+			counter-increment: li;
+			padding-left: $mg*2.5;
+		}
+		li::before {
+			position: absolute;
+			top: 0;
+			left: -$mg*1;
+			display: block;
+			box-sizing: content-box;
+			width: 2em;
+			height: 2em;
+			padding: 0;
+			color: #fff;
+			line-height: 2;
+			text-align: center;
+			background-color: $c-accent;;
+			border-radius: 50%;
+			// box-shadow: 0 0 0 1px #000;
+			transform: scale(.8);
+			transform-origin: 0 50%;
+			content: counter(li);
+		}
+	}
+	p {
+		margin: $unit * 2 0;
+	}
+
+	pre {
+		line-height: 1.5;
+		white-space: pre-wrap;
+		font-family: $font-family;
+		font-size: $unit * 1.6;
+	}
+	dl {
+		line-height: 1.8;
+		padding: $unit * 3;
+		border-radius: 3px;
+		border: 1px solid $c-frostywhite;
+		margin-bottom: $mgb;
+		dt {
+			font-weight: bold;
+		}
+		dd {
+			margin-bottom: $unit * 1;
+			border-bottom: 1px dotted $c-frostywhite;
+			padding-bottom: 0.5rem;
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0 0 $mg * 2 0;
+		font-weight: bold;
+		line-height: 1.8;
+	}
+
+	h1 {
+		font-size: $unit*5; 
+	}
+	h2 {
+		font-size: $unit*4;
+		padding-bottom: $mg * 0.2;
+		border-bottom: 2px solid $c-darkgray;
+	}
+	h3 {
+		font-size: $unit*3.25; 
+		padding-bottom: $mg * 0.2;
+		border-bottom: 1px solid $c-frostywhite;
+	}
+	h4 {
+		font-size: $unit*2.5; 
+	}
+	h5 {
+		font-size: $unit*2.25; 
+	}
+	h6 {
+		font-size: $unit*2.125;
+	}
+
+	h1 + h2,
+	h2 + h3,
+	h3 + h4,
+	h4 + h5,
+	h5 + h6 {
+		margin-top: $mg * 2;
+	}
+	dl + h5,
+	dl + h6,
+	ul + h5,
+	ul + h6,
+	ol + h5,
+	ol + h6 {
+		margin-bottom: $mg * 0.5;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	$table-color: #b0c7d2;
+	/* table */
+	table {
+		margin: $mgb auto $unit * 2;
+		width: 100%;
+		td,
+		th {
+			padding: $unit * 0.5 $unit * 1;
+			border: 1px solid $table-color;
+			line-height: 1.8;
+			&.-nowrap {
+				white-space: nowrap;
+			}
+		}
+		th {
+			background: $table-color;
+			text-align: center;
+			color: #fff;
+			font-weight: normal;
+		}
+		td.td_strong {
+			font-weight: bold;
+		}
+		th {
+			text-align: left;
+		}
+	}
+	// 2020年版グーテンベルク対応
+	.tableformat01 {
+		margin-bottom: $mgbl;
+		table {
+			thead {
+				td,
+				th {
+				}
+			}
+		}
+	}
 }

@@ -3,7 +3,10 @@
 =========================================================*/
 .sidebar-container {
 	padding: $mg;
+	display: flex;
+	justify-content: space-between;
 	> .widget-container {
 		margin-bottom: $mg * 5;
+		width: 100%;
 	}
 }

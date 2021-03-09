@@ -3,6 +3,12 @@
 サイトのフッタ
 
 #########################################################*/
+body{
+	>.site-footer{
+		max-width: $w-content;
+		margin: auto;
+	}	
+}
 .site-footer{
 	padding: $mg;
 }

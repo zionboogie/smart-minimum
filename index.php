@@ -1,51 +1,56 @@
 <?php
-/*
-トップページ用テンプレート
+/**
+* サイトのエントリーポイント
+* 該当するテンプレート部分を読み込む
+*
+* @link https://github.com/zionboogie/smart-minimum
+*
+* @package WordPress
+* @subpackage SMART-MINIMUM
+* @since 1.0.0
 */
+
 // ヘッダの出力
 get_header();
 ?>
 
-<h2>index.php</h2>
-
 <!-- main -->
 <main class="main-container">
 
-<?php if ( have_posts() ) : ?>
+<?php 
 
-	<!-- entrylist-contaier -->
-	<article class="entrylist-contaier">
-	<?php
-	while ( have_posts() ) {
-		the_post();
-		// 記事の出力
-		get_template_part( 'template-parts/content' );
-	}
-	?>
+// シングルページ
+if ( is_single() ) {
+	get_template_part( 'template-parts/pg-single' );
+// 固定ページ
+} elseif ( is_page() ) {
+	get_template_part( 'template-parts/pg-page' );
+// カテゴリ
+} elseif ( is_category() ) {
+	get_template_part( 'template-parts/pg-category' );
+// アーカイブ
+} elseif ( is_archive() ) {
+	get_template_part( 'template-parts/pg-archive' );
+// トップページ
+} elseif ( is_home() ) {
+	get_template_part( 'template-parts/pg-home' );
+// 検索ページ
+} elseif ( is_search() ) {
+	get_template_part( 'template-parts/pg-search' );
+// 404ページ
+} else {
+	get_template_part( 'template-parts/pg-404' );
+}
 
-	<?php
-	// ページネーションの出力
-	get_template_part( 'template-parts/pagination' );
-	?>
-
-	</article>
-	<!-- /entrylist-contaier -->
-
-<?php endif; ?>
-
-<?php
 // サイドバーの出力
 get_sidebar();
+
 ?>
 
 </main>
 <!-- /main -->
 
-
-
 <?php
 // フッタの出力
 get_footer();
-?>
-();
 ?>

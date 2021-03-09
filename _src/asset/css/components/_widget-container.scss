@@ -6,4 +6,11 @@
 	> ul {
 		list-style: none;
 	}
+	&.-dynamic{
+		display: flex;
+		justify-content: space-between;
+		.widget{
+
+		}
+	}
 }

@@ -1,12 +1,11 @@
 <?php
-/*
-Template Name: smart
+/**
+* 検索ページ用テンプレート
+*
+* @package WordPress
+* @subpackage SMART-MINIMUM
 */
-get_header();
 ?>
-
-<!-- main-container -->
-<main class="main-container">
 
 <?php
 // パンくずリストの出力
@@ -26,10 +25,3 @@ get_template_part( 'template-parts/breadcrumb' );
 // 検索コンテンツ
 get_template_part( 'template-parts/content-category-tag' );
 ?>
-
-</main>
-<!-- /main-container -->
-
-
-<?php get_footer(); ?>
-ooter(); ?>

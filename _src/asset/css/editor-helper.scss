@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/*#########################################################
+
+読み込み
+
+#########################################################*/
+// リセットCSS（ress.css）
+@import "base/ress.scss";
+// 変数・mixin
+@import "base/generic.scss";
+// 要素のデフォルト
+@import "base/base.scss";
+// よく使うグローバルなElements集
+@import "base/global.scss";
+
+/* ========================================================
+Components
+=========================================================*/
+@import "components/entry-container.scss";

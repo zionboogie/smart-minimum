@@ -1,27 +1,26 @@
 <?php
-/*
-パーツ：記事一覧のループ部分
+/**
+* パーツ：記事一覧のループ部分
 */
 ?>
-	<!-- entry-header -->
-	<div id="post-<?php the_ID(); ?>" <?php post_class("entry-header"); ?>>
-		<?php
-		// 記事タイトルの出力
-		the_title( sprintf( '<h2 class="title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
-		?>
-		<div class="postmeta">
-			<span class="postdate"><?php
-			// 日付の出力
-			smart_entry_date();
-			?></span>
-			<span class="category-list"><?php
-			// カテゴリの出力
-			smart_entry_category();
-			?></span>
-			<span class="tag"><?php
-			// タグの出力
-			smart_entry_tag();
-			?></span>
-		</div>
-	</div>
-	<!-- /entry-header -->
+
+	<!-- 記事ヘッダの出力 -->
+	<?php get_template_part( 'template-parts/contentheader' ); ?>
+
+	<!-- entry-content -->
+	<section class="entry-container">
+		<?php echo get_field('text'); ?>
+		<?php echo post_custom('text'); ?>
+		<?php the_content(); ?>
+		<?php wp_link_pages(); ?>
+	</section>
+	<!-- /entry-content -->
+
+	<!-- entry-footer -->
+	<footer class="entry-footer">
+
+		<!-- コメントの表示 -->
+		<?php comments_template(); ?>
+
+	</footer>
+	<!-- /entry-footer -->
