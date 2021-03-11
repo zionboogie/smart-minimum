@@ -14,11 +14,26 @@ CSSはSassによる出力で、CSS設計手法はRSCSSを採用しています�
 JavaScriptとSCSSのソースファイルは_src/assetにそれぞれ保存します。
 CSSは全ページ共通でstyle.cssを読み込みます。テーマディレクトリ直下にあるstyle.scssからコンポーネント用SCSSファイルを読み込み、style.cssを出力します。
 JSはテンプレート毎に用意する方式で、index.php、single.php、category.php、404.php用のJSをそれぞれ出力します。
-2.0系との違い：functions.phpで制御します。
 テーマを最初から作る際のひな形として使ってください。
 
 https://rfs.jp/
 
+【チェックツール】
+・HTML構文チェック
+https://validator.w3.org/
+※WordPress本体の出力で警告あり
+・PageSpeed Insights
+https://developers.google.com/speed/pagespeed/insights/
+モバイル：100
+パソコン：100
+・モバイル フレンドリー テスト
+https://search.google.com/test/mobile-friendly
+・Lighthouse（Chrome デベロッパーツール）
+Performance：100
+Accessibility：100
+Best Practices：100
+
+
 == Copyright ==
 
-SMART-MINIMUM WordPress Theme, Copyright 2020 rhythmfactory Ltd.
+SMART-MINIMUM WordPress Theme, Copyright 2021 rhythmfactory Ltd.

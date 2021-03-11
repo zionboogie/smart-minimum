@@ -9,18 +9,14 @@
 
 	<!-- entry-content -->
 	<section class="entry-container">
-		<?php echo get_field('text'); ?>
-		<?php echo post_custom('text'); ?>
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
 	</section>
 	<!-- /entry-content -->
 
 	<!-- entry-footer -->
-	<footer class="entry-footer">
-
+	<div class="entry-footer">
 		<!-- コメントの表示 -->
 		<?php comments_template(); ?>
-
-	</footer>
+	</div>
 	<!-- /entry-footer -->
